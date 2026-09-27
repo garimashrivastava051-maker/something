@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Remembering Ratan Tata</title>
+<meta name="description" content="A long-form tribute to Ratan Tata (1937–2024): his early life, the steel plant floor, three decades leading the Tata group, the Nano, 26/11, and the fortune he gave away.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+  :root {
+    --paper: #F5F7F9;
+    --ink: #16202B;
+    --ink-soft: #37434F;
+    --muted: #5F6C79;
+    --rule: #D5DCE3;
+    --steel: #1E4D78;
+    --marigold: #C98A0E;
+    --hero-bg: #13283D;
+    --hero-ink: #EEF2F6;
+    --hero-muted: #9DB0C3;
+    --hero-line: #3C5670;
+    --hero-accent: #E9B44C;
+
+    --display: "Libre Caslon Display", "Libre Caslon Text", Georgia, "Times New Roman", serif;
+    --serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+    --label: "IBM Plex Sans Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --paper: #0E141A;
+      --ink: #E3E8ED;
+      --ink-soft: #C2CBD4;
+      --muted: #8E9BA8;
+      --rule: #27333E;
+      --steel: #8FB5DC;
+      --marigold: #E3AE45;
+      --hero-bg: #112436;
+      --hero-ink: #EEF2F6;
+      --hero-muted: #93A7BB;
+      --hero-line: #34506B;
+      --hero-accent: #E9B44C;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --paper: #0E141A;
+    --ink: #E3E8ED;
+    --ink-soft: #C2CBD4;
+    --muted: #8E9BA8;
+    --rule: #27333E;
+    --steel: #8FB5DC;
+    --marigold: #E3AE45;
+    --hero-bg: #112436;
+    --hero-ink: #EEF2F6;
+    --hero-muted: #93A7BB;
+    --hero-line: #34506B;
+    --hero-accent: #E9B44C;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--steel); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible { outline: 2px solid var(--marigold); outline-offset: 3px; border-radius: 2px; }
+
+  .wrap { max-width: 72rem; margin-inline: auto; padding-inline: 1.25rem; }
+
+  /* Hero */
+  .hero { background: var(--hero-bg); color: var(--hero-ink); }
+  .hero .wrap { padding-block: 3.5rem 2.75rem; display: grid; gap: 1.5rem; }
+  .eyebrow {
+    font-family: var(--label);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .hero .eyebrow { color: var(--hero-accent); }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(3.75rem, 13vw, 8.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.015em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .dek {
+    font-size: clamp(1.1875rem, 2.4vw, 1.4375rem);
+    line-height: 1.5;
+    max-width: 38rem;
+    margin: 0;
+    color: var(--hero-ink);
+    text-wrap: pretty;
+  }
+  .byline {
+    font-family: var(--label);
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    color: var(--hero-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+    margin: 0;
+  }
+
+  /* Lifeline: 1937 to 2024 drawn to scale */
+  .lifeline { margin-top: 1rem; max-width: 46rem; }
+  .lifeline-track { position: relative; height: 3.25rem; }
+  .lifeline-track::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: 2.1rem;
+    height: 2px;
+    background: var(--hero-line);
+  }
+  .lifeline-span {
+    position: absolute;
+    top: calc(2.1rem - 3px);
+    height: 8px;
+    border-radius: 1px;
+    background: var(--hero-accent);
+  }
+  .tick {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--label);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+    color: var(--hero-muted);
+  }
+  .tick::after {
+    content: "";
+    width: 1px;
+    height: 0.95rem;
+    margin-top: 0.2rem;
+    background: var(--hero-muted);
+  }
+  .tick.start { transform: none; align-items: flex-start; }
+  .tick.end { transform: translateX(-100%); align-items: flex-end; }
+  .lifeline-key {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0.35rem 0 0;
+    font-family: var(--label);
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--hero-muted);
+  }
+  .lifeline-key::before {
+    content: "";
+    width: 1.5rem; height: 6px;
+    border-radius: 1px;
+    background: var(--hero-accent);
+    flex: none;
+  }
+
+  /* Body layout */
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+    padding-block: 3rem 4rem;
+  }
+  @media (min-width: 60rem) {
+    body { font-size: 1.1875rem; }
+    .layout { grid-template-columns: minmax(0, 40rem) minmax(0, 17rem); justify-content: space-between; gap: 4rem; }
+    .timeline-box {
+      position: sticky;
+      top: calc(env(safe-area-inset-top, 0px) + 1.5rem);
+      max-height: calc(100vh - 3rem);
+      overflow-y: auto;
+    }
+  }
+
+  article { min-width: 0; }
+  article p { margin: 0 0 1.15em; text-wrap: pretty; }
+  .lede { font-size: 1.12em; color: var(--ink); }
+  .lede::first-letter {
+    font-family: var(--display);
+    float: left;
+    font-size: 4.1em;
+    line-height: 0.82;
+    padding: 0.08em 0.1em 0 0;
+    color: var(--steel);
+  }
+
+  section { margin-top: 3.25rem; }
+  section .eyebrow { color: var(--steel); margin-bottom: 0.5rem; font-variant-numeric: tabular-nums; }
+  h2 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    line-height: 1.1;
+    margin: 0 0 1.1rem;
+    text-wrap: balance;
+  }
+
+  /* Pull quote */
+  .pull {
+    margin: 3rem 0;
+    padding-block: 1.75rem;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .pull blockquote { margin: 0; }
+  .pull blockquote p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.45rem, 3.2vw, 1.85rem);
+    line-height: 1.35;
+    margin: 0;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .pull blockquote p::before {
+    content: "\201C";
+    display: block;
+    font-family: var(--display);
+    font-style: normal;
+    font-size: 3.5em;
+    line-height: 0.6;
+    height: 0.42em;
+    color: var(--marigold);
+  }
+  .pull figcaption {
+    margin-top: 1rem;
+    font-family: var(--label);
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+
+  /* The Nano price figure */
+  .price {
+    margin: 2.25rem 0 2.5rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+  .price-figure {
+    font-family: var(--display);
+    font-size: clamp(3.25rem, 11vw, 5.5rem);
+    line-height: 1;
+    color: var(--steel);
+    font-variant-numeric: lining-nums;
+    letter-spacing: -0.01em;
+  }
+  .price figcaption {
+    font-family: var(--label);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.45;
+    color: var(--muted);
+    max-width: 30rem;
+  }
+
+  /* Timeline aside */
+  .timeline-box h2 {
+    font-family: var(--label);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 1.25rem;
+  }
+  .timeline {
+    list-style: none;
+    margin: 0 0 0 6px;
+    padding: 0 0 0 1.1rem;
+    border-left: 1px solid var(--rule);
+    display: grid;
+    gap: 1.05rem;
+  }
+  .timeline li { position: relative; font-size: 0.9375rem; line-height: 1.45; color: var(--ink-soft); }
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.1rem - 4px);
+    top: 0.42rem;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--steel);
+  }
+  .timeline li.key::before { background: var(--marigold); width: 9px; height: 9px; left: calc(-1.1rem - 5px); top: 0.36rem; }
+  .timeline .yr {
+    display: block;
+    font-family: var(--label);
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    font-variant-numeric: tabular-nums;
+    color: var(--steel);
+  }
+
+  /* Footer */
+  .sources {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.9375rem;
+    color: var(--muted);
+  }
+  .sources h2 {
+    font-family: var(--label);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 0.75rem;
+  }
+  .sources ul { margin: 0.5rem 0 1rem; padding-left: 1.1rem; }
+  .sources li { margin-bottom: 0.25rem; }
+  .published {
+    font-family: var(--label);
+    font-weight: 500;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+
+  @media (max-width: 30rem) {
+    .tick { font-size: 0.75rem; }
+    .tick.hide-sm { display: none; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .lifeline-span { transform-origin: left center; animation: grow 1.1s cubic-bezier(.2,.7,.2,1) 0.2s both; }
+    @keyframes grow { from { transform: scaleX(0.04); } to { transform: scaleX(1); } }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">In memoriam &middot; 1937&ndash;2024</p>
+    <h1>Ratan Tata</h1>
+    <p class="dek">He took an old Indian business house to the world, built a car for families riding four to a scooter, and gave most of what he earned away. This is the story of his life.</p>
+    <p class="byline"><span>Biography</span><span>14 min read</span><span>Mumbai</span></p>
+
+    <div class="lifeline" role="img" aria-label="A timeline of his life drawn to scale, from 1937 to 2024, with his years as chairman of Tata Sons, 1991 to 2012, highlighted.">
+      <div class="lifeline-track">
+        <!-- Positions are (year - 1937) / 87 years -->
+        <span class="lifeline-span" style="left:62.07%; width:24.14%"></span>
+        <span class="tick start" style="left:0%">1937</span>
+        <span class="tick hide-sm" style="left:28.74%">1962</span>
+        <span class="tick" style="left:62.07%">1991</span>
+        <span class="tick" style="left:86.21%">2012</span>
+        <span class="tick end" style="left:100%">2024</span>
+      </div>
+      <p class="lifeline-key">Chairman of Tata Sons, 1991&ndash;2012</p>
+    </div>
+  </div>
+</header>
+
+<div class="wrap layout">
+  <article>
+    <p class="lede">When Ratan Tata died in Mumbai on 9 October 2024, people queued for hours outside the National Centre for the Performing Arts to walk past his coffin. Factory workers stood in the same line as film stars, students and politicians. He had run one of the world's largest business groups for more than two decades. Yet people remembered him less for the size of what he built than for the way he behaved while building it.</p>
+    <p>This is the story of that life: a lonely childhood, years on the floor of a steel plant, bold deals abroad, a little car that didn't sell, and a fortune that mostly went to charity.</p>
+
+    <section id="early-life">
+      <p class="eyebrow">1937&ndash;1962</p>
+      <h2>Raised by his grandmother</h2>
+      <p>Ratan Naval Tata was born in Bombay on 28 December 1937. His family had built one of India's oldest industrial houses, started by Jamsetji Tata in 1868. His father, Naval, had been adopted into the family as a boy by Navajbai Tata, the widow of Jamsetji's younger son, Sir Ratanji Tata.</p>
+      <p>His parents separated when he was about ten. He and his younger brother, Jimmy, were brought up by Navajbai, a strict and loving grandmother. For the rest of his life he credited her with teaching him dignity and restraint. He was a shy child, and he stayed a private adult.</p>
+      <p>He went to school in Bombay and at Bishop Cotton School in Shimla, finished at Riverdale Country School in New York, and went on to Cornell University. His father wanted him to become an engineer. He chose architecture instead, earned his degree in 1962, and took a job with an architecture firm in Los Angeles. He loved California and thought he might stay.</p>
+      <p>Then his grandmother fell ill, and he came home.</p>
+    </section>
+
+    <section id="shop-floor">
+      <p class="eyebrow">1962&ndash;1991</p>
+      <h2>Limestone and blast furnaces</h2>
+      <p>The heir to the Tata name did not start in a boardroom. He was sent to the Tata Steel works at Jamshedpur, where he spent months on the shop floor, shovelling limestone and working near the blast furnaces with the plant's crews. It was hot, hard work, and it gave him a view of the company that few chairmen ever get.</p>
+      <p>His rise was slow, and not every assignment went well. In 1971 he was put in charge of National Radio and Electronics, known as Nelco, a loss-making electronics company. He turned it around for a while, but a recession and labour trouble undid much of the progress. His plan to revive Empress Mills, an ageing textile mill in Nagpur, was turned down, and the mill later closed. In 1975 he completed the Advanced Management Program at Harvard Business School, and in 1981 he became chairman of Tata Industries, a small group company, where he began working out how the whole group would have to change.</p>
+      <p>All the while, J.R.D. Tata was watching.</p>
+    </section>
+
+    <section id="the-chair">
+      <p class="eyebrow">1991</p>
+      <h2>Taking the chair</h2>
+      <p>In March 1991, J.R.D. Tata, who had led the group since 1938, handed the chairmanship of Tata Sons to Ratan. He was 53. Four months later India began opening its economy to foreign competition, and the protected market in which Indian conglomerates had grown up started to disappear.</p>
+      <p>Many people doubted him. The group was a loose federation of companies, and several of them were run by powerful chiefs who had worked for decades with little interference from Bombay House, the group's headquarters. Russi Mody at Tata Steel, Darbari Seth at Tata Chemicals and Ajit Kerkar at Indian Hotels were among them.</p>
+      <p>Ratan Tata dealt with them slowly and firmly. He introduced a retirement age for directors, raised Tata Sons' stakes in the main companies, and asked group companies to pay a royalty for using the Tata name. Within a few years the old guard had gone, and the companies had begun to act as one group.</p>
+      <p>He also pushed into new businesses: software, telecoms, retail and, closest to his heart, passenger cars.</p>
+    </section>
+
+    <section id="cars">
+      <p class="eyebrow">1998&ndash;2019</p>
+      <h2>A car for the family on the scooter</h2>
+      <p>In 1998 Telco, the company now called Tata Motors, launched the Indica, the first passenger car designed and developed by an Indian company. Early buyers complained, and the first version had real problems. A reworked Indica V2 went on to become one of the best-selling cars in the country.</p>
+      <p>Those early years have a well-known sequel. In 1999, with the car business struggling, Tata and his team went to Detroit to talk about selling it to Ford. People who were in the room have said that a Ford executive asked why Tata had ever gone into the car business at all. The talks came to nothing. Nine years later, Tata Motors bought Jaguar and Land Rover from Ford.</p>
+      <p>His most personal project came next. He described watching families of four riding on a single two-wheeler in the rain, a child squeezed between the parents, and wanting to give them something safer. He promised a car that would cost one lakh rupees.</p>
+
+      <figure class="price">
+        <span class="price-figure">&#8377;1,00,000</span>
+        <figcaption>One lakh rupees. The price Ratan Tata promised for the Nano, about $2,500 when the car was unveiled in January 2008.</figcaption>
+      </figure>
+
+      <p>The Nano was unveiled at the Auto Expo in New Delhi in January 2008, at the promised price. Its engineers got there by rethinking almost every part, from the single windscreen wiper to the small engine mounted at the back.</p>
+      <p>Then the trouble started. Protests over farmland at the planned factory in Singur, West Bengal, forced Tata to move production to Sanand in Gujarat. A few early cars caught fire, which hurt the car's reputation. And buyers did not want to be seen driving the cheapest car in the world. Tata later admitted that marketing it that way had been a mistake. Sales never took off, and the Nano was quietly retired by the end of the 2010s.</p>
+      <p>He never stopped standing by the idea. In 2022, at 84, he arrived at the Taj hotel in Mumbai in a white Nano, with no convoy.</p>
+    </section>
+
+    <section id="abroad">
+      <p class="eyebrow">2000&ndash;2008</p>
+      <h2>Buying abroad</h2>
+      <p>In 2000 Tata Tea bought Tetley, the British tea company, for about &pound;271 million. At the time it was the largest foreign acquisition by an Indian company, and it showed that an Indian group could buy a famous Western brand and run it well.</p>
+      <p>The deals grew larger. In 2007, after a bidding war with Brazil's CSN, Tata Steel bought the Anglo-Dutch steelmaker Corus for about $12 billion. In 2008 Tata Motors paid Ford $2.3 billion for Jaguar Land Rover, just before the global financial crisis hit car sales hard. Critics said Tata had overpaid for both.</p>
+      <p>The results were mixed. Corus weighed on Tata Steel for years. Jaguar Land Rover had a difficult start and then became one of the most valuable parts of the group.</p>
+      <p>At home, Tata Consultancy Services, the group's software company, went public in 2004 and grew into its biggest source of profit. By the time Ratan Tata stepped down, more than half of the group's revenue came from outside India, and its total revenue had passed $100 billion a year.</p>
+    </section>
+
+    <figure class="pull">
+      <blockquote>
+        <p>I don't believe in taking right decisions. I take decisions and then make them right.</p>
+      </blockquote>
+      <figcaption>A line often quoted as Ratan Tata's</figcaption>
+    </figure>
+
+    <section id="taj">
+      <p class="eyebrow">26 November 2008</p>
+      <h2>The night the Taj burned</h2>
+      <p>On the night of 26 November 2008, gunmen who had arrived by sea attacked several places across Mumbai. One of them was the Taj Mahal Palace, the hotel Jamsetji Tata had opened in 1903 and the most famous building the group owned. The siege there lasted until the morning of 29 November. Dozens of people were killed inside the hotel, among them staff members who stayed at their posts to lead guests to safety.</p>
+      <p>Ratan Tata went to the hotel while the attack was still going on. In the weeks that followed he visited the families of employees who had been killed or injured. The group kept paying staff while the hotel was closed and supported the families of those who died, including the cost of their children's education. It also set up the Taj Public Service Welfare Trust, which helped victims with no link to the hotel, among them railway passengers, police officers and street vendors.</p>
+      <p>Part of the Taj reopened less than a month later, on 21 December 2008.</p>
+    </section>
+
+    <section id="giving">
+      <p class="eyebrow">1991&ndash;2024</p>
+      <h2>Giving it away</h2>
+      <p>Ratan Tata led one of India's largest businesses, yet he was never close to the top of the country's rich lists. The reason lies in how the group is owned. About two-thirds of Tata Sons, the group's holding company, belongs to charitable trusts set up by members of the family. When the companies do well, much of the dividend goes to philanthropy.</p>
+      <p>He chaired the Tata Trusts for more than three decades. Under him they paid for cancer hospitals, clean drinking water, rural livelihoods, nutrition programmes and research. The trusts and group companies gave $50 million to Harvard Business School in 2010, and the trusts funded scholarships for Indian students at Cornell, his old university.</p>
+      <p>One of his last projects came from a lifelong soft spot. In 2024 the trusts opened a small animal hospital in Mumbai that treats pets and strays around the clock. Stray dogs had long been allowed to shelter at Bombay House, where the staff looked after them.</p>
+    </section>
+
+    <section id="after">
+      <p class="eyebrow">2012&ndash;2024</p>
+      <h2>After the chair</h2>
+      <p>Ratan Tata retired as chairman on his 75th birthday, 28 December 2012, and handed over to Cyrus Mistry. He took the title of chairman emeritus. In October 2016 the board removed Mistry after a bitter falling-out, and Tata came back as interim chairman for about four months, until N. Chandrasekaran, the head of TCS, took over in early 2017.</p>
+      <p>In retirement he became one of India's best-known startup investors. He put his own money into young companies such as Ola, Paytm, Snapdeal, Lenskart and Urban Ladder, and founders valued his backing as much as his cheque.</p>
+      <p>In 2021 the government sold Air India to Tata Sons. The airline had started life as Tata Airlines, founded by J.R.D. Tata in 1932, and had been nationalised in 1953. When the sale was announced, Ratan Tata posted an old photograph of J.R.D. with the words &ldquo;Welcome back, Air India.&rdquo;</p>
+    </section>
+
+    <section id="private">
+      <p class="eyebrow">The man</p>
+      <h2>A private life</h2>
+      <p>He never married. He said he had come close four times, once in Los Angeles in the early 1960s, when the woman's family would not let her follow him to India after the war with China in 1962.</p>
+      <p>He was a licensed pilot and loved to fly. At the Aero India show in Bengaluru in 2007 he flew as co-pilot in an F-16 fighter jet. He loved cars, architecture and, above all, dogs.</p>
+      <p>In his last years his closest companion at work was Shantanu Naidu, a young engineer who had first written to him about reflective collars to keep stray dogs safe from traffic. Naidu became his assistant and friend, and Tata backed his startup, Goodfellows, which pairs young people with older people who live alone.</p>
+      <p>India gave him its third- and second-highest civilian honours, the Padma Bhushan in 2000 and the Padma Vibhushan in 2008.</p>
+    </section>
+
+    <section id="farewell">
+      <p class="eyebrow">9 October 2024</p>
+      <h2>Farewell</h2>
+      <p>Ratan Tata died at Breach Candy Hospital in Mumbai on 9 October 2024, aged 86. His body lay in state at the NCPA, where thousands of people filed past, and he was cremated with state honours at Worli the next day. Photographs of Goa, one of his dogs, sitting quietly beside the coffin went around the country.</p>
+      <p>A few days later his half-brother, Noel Tata, was named chairman of the Tata Trusts.</p>
+    </section>
+
+    <section id="legacy">
+      <p class="eyebrow">Legacy</p>
+      <h2>What he left behind</h2>
+      <p>Part of his legacy shows up on balance sheets. Under him, the Tata group grew from an Indian conglomerate into a global one, with Jaguar Land Rover, Tetley and TCS among its businesses. Some of his biggest bets, like Corus and the Nano, did not work out the way he hoped, and he said so openly.</p>
+      <p>The rest is harder to measure. He showed that a large Indian company could compete anywhere and still keep its sense of duty to its workers and the public. He was wealthy and powerful, and he chose to live quietly, to give most of it away, and to treat a stray dog, a factory worker and a head of state with the same courtesy. That is why so many strangers stood in line to say goodbye.</p>
+    </section>
+
+    <footer class="sources">
+      <h2>Sources and further reading</h2>
+      <p>This post draws on published interviews, company histories and news reporting about Ratan Tata's life. To read more:</p>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Ratan_Tata">Ratan Tata on Wikipedia</a></li>
+        <li><a href="https://www.tatatrusts.org">Tata Trusts</a></li>
+      </ul>
+      <p class="published">Published 27 September 2026</p>
+    </footer>
+  </article>
+
+  <aside class="timeline-box" aria-labelledby="timeline-title">
+    <h2 id="timeline-title">His life, year by year</h2>
+    <ol class="timeline">
+      <li><span class="yr">1937</span>Born in Bombay on 28 December</li>
+      <li><span class="yr">1962</span>Graduates in architecture from Cornell and joins the Tata group at Jamshedpur</li>
+      <li><span class="yr">1971</span>Takes charge of Nelco</li>
+      <li><span class="yr">1981</span>Becomes chairman of Tata Industries</li>
+      <li class="key"><span class="yr">1991</span>Succeeds J.R.D. Tata as chairman of Tata Sons</li>
+      <li><span class="yr">1998</span>Tata Indica goes on sale</li>
+      <li><span class="yr">2000</span>Tata Tea buys Tetley. Awarded the Padma Bhushan</li>
+      <li><span class="yr">2004</span>TCS goes public</li>
+      <li><span class="yr">2007</span>Tata Steel buys Corus</li>
+      <li><span class="yr">2008</span>Nano unveiled. Jaguar Land Rover bought from Ford. Attack on the Taj. Awarded the Padma Vibhushan</li>
+      <li class="key"><span class="yr">2012</span>Retires as chairman at 75</li>
+      <li><span class="yr">2016</span>Returns as interim chairman</li>
+      <li><span class="yr">2021</span>Tata Sons wins back Air India</li>
+      <li class="key"><span class="yr">2024</span>Dies in Mumbai on 9 October, aged 86</li>
+    </ol>
+  </aside>
+</div>
+</body>
+</html>
